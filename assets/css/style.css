@@ -4,25 +4,35 @@ body {
 
 .header {
 	width: auto;
+	text-align: center;
 	background-color: white;
-	border: 2px solid;
-	padding: 20px 10px;
-	margin: 0 auto;
+	border: 1px solid;
+	padding: 10px 5px;
+	margin-bottom: 10px;
 }
 
-.col-md {
-	width: auto;
+.col-md-4 {
 	background-color: white;
-	border: 2px solid;
-	padding: 20px 10px;
-	margin: 0 auto;
-	margin-top: 20px;
+	border: 1px solid;
+	padding: 20px;
+	margin: 10px;
+}
+
+.col-md-6 {
+	background-color: white;
+	border: 1px solid;
+	padding: 15px;
+	margin: 10px;
+}
+
+.col-md-12 {
+	width: 100%;
 }
 
 .crystal-image {
 	width: 120px;
 	clear: all;
-	margin: 30px;
-	border: 2px solid;
+	border: 1px solid;
+	margin: 10px;
 }
 

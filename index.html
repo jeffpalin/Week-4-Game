@@ -15,33 +15,43 @@
 
 <body>
     <div class="header">
-        <h2>Crystals Collector!</h2>
+        <h1>Crystals Collector!</h1>
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-md">
+            <div class="col-md-6">
                 <p>
                     You will be given a random number at the start of the game.
-                    <br> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
+                    <br>
+                    <br>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
+                    <br>
                     <br> You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.
+                    <br>
                     <br> The value of each crystal is hidden from you intil you click on it.
-                    <br> Each time when the game starts, the game will change the values of each crystal.
-                </p>
+                    <br>
+                    <br> Each time when the game starts, the game will change the values of each crystal.</p>
             </div>
-            <br>
-            <div>
-                <h2>
-                Number to Guess: <span id="guessNum"></span>
-                <br>Total Score: <span id="counter"></span>
-                <br>Wins: <span id="wins"></span>
-                <br>Losses: <span id="losses"></span>
-                </h2>
+            <div class="col-md-4">
+                <h3>Number to Guess: <span id="guessNum"></span>
+                <br>
+                <br>
+                Total Score: <span id="counter"></span>
+                <br>
+                <br>
+                Wins: <span id="wins"></span>
+                <br>
+                <br>
+                Losses: <span id="losses"></span></h3>
             </div>
-            <div id="crystals">
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div id="crystals">
+                </div>
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="assets/javascript/game.js"></script>
+    <script type="text/javascript " src="assets/javascript/game.js "></script>
 </body>
 
 </html>
