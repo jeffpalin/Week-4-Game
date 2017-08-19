@@ -6,6 +6,9 @@ $(document).ready(function(){
 
 var guessNum = Math.floor((Math.random() *100) + 19);
 
+var wins = 0
+var losses = 0
+
 // runs, and updates HTMl for random computer number
 
 $("#guessNum").text(guessNum);
@@ -18,9 +21,13 @@ $("#guessNum").text(guessNum);
 
 var crystals = [];
 
-for (i=0; i<4; i++) {
+function crystalArray () {
+	for (i=0; i<4; i++) {
 	crystals.push(Math.floor((Math.random() * 12) + 1));
+	}
 }
+
+crystalArray();
 
 // For each iteration, we will create an imageCrystal
 		var green = $("<img>");
@@ -75,22 +82,26 @@ $(".crystal-image").on("click", function() {
 
     counter += crystalValue;
 
-// All of the same game win-lose logic applies. So the rest remains unchanged.
 
-	alert("New score: " + counter);
+// All of the same game win-lose logic applies. So the rest remains unchanged.
 
 	if (counter === guessNum) {
 		alert("You win!");
 		counter = 0;
+		wins++;
+		crystalArray();
+
 	}	else if (counter >= guessNum) {
 			alert("You lose!!");
 			counter = 0;
+			losses++;
+			crystalArray();
 	}
 
+$("#wins").text(wins);
+$("#losses").text(losses);
+$("#counter").text(counter);
+
 });
-
-
-
-
 
 });
