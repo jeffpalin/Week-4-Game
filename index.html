@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Crystals Collector!</title>
+    <!-- Added link to the jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Added link to the reset css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- Added link to the bootstrap framework css -->
+<!--     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <!-- Added link to the local style.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1>Crystals Collector!</h1>
+    </div>
+    <ul id="instructions">
+        <li>You will be given a random number at the start of the game.</li>
+        <br>
+        <li>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</li>
+        <br>
+        <li>You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.</li>
+        <br>
+        <li>The value of each crystal is hidden from you intil you click on it.</li>
+        <br>
+        <li>Each time when the game starts, the game will change the values of each crystal.</li>
+    </ul>
+    <div id="guessNum">Number to Guess: </div>
+    <br>
+    <h3>Second Crystal: <span id="wins"></span></h3>
+    <div id="second">Second Crystal</div>
+    <div id="third">Third Crystal</div>
+    <div id="fourth">Fourth Crystal</div>
+    <!-- <div id="game" class="col-xs-offset-1">
+		<h3>Wins: <span id="wins"></span></h3>
+		<br>
+		<h3>Losses: <span id="losses"></span></h3>
+		<br>
+		<h3>Guesses Left: <span id="guesses"></span></h3>
+		<br>
+		<h3>Guesses: <span id="letters"></span></h3>
+
+	</div> -->
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+</body>
+
+</html>

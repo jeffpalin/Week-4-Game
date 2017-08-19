@@ -1,0 +1,22 @@
+
+
+
+body {
+	background-image: url("assets/images/diamond.png");
+	margin: 0 auto;
+}
+
+.jumbotron {
+	width: 80%;
+	background-color: "light-grey";
+	border: 2px;
+	padding: 20px 40px;
+	text-align: center;
+}
+
+#instructions {
+	width: 50%;
+	margin: 30px;
+	padding: 40px;
+	border: 2px solid;
+}
