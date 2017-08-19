@@ -5,12 +5,12 @@
     <title>Crystals Collector!</title>
     <!-- Added link to the jQuery Library -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <!-- Added link to the reset css -->
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <!-- Added link to the bootstrap framework css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <!-- Added link to the local style.css -->
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Barrio|Roboto" rel="stylesheet">
 </head>
 
 <body>
@@ -20,19 +20,20 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <p>
-                    You will be given a random number at the start of the game.
+                <ol>
+                    <li>You will be given a random number at the start of the game.</li>
                     <br>
-                    <br>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
+                    <li>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</li>
                     <br>
-                    <br> You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.
+                    <li>You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number.</li>
                     <br>
-                    <br> The value of each crystal is hidden from you intil you click on it.
+                    <li>The value of each crystal is hidden from you until you click on it.</li>
                     <br>
-                    <br> Each time when the game starts, the game will change the values of each crystal.</p>
+                    <li>Each time when the game starts, the game will change the values of each crystal.</li>
+				</ol>
             </div>
-            <div class="col-md-4">
-                <h3>Number to Guess: <span id="guessNum"></span>
+            <div class="col-md-5">
+                <h3>Random Number: <span id="guessNum"></span>
                 <br>
                 <br>
                 Total Score: <span id="counter"></span>

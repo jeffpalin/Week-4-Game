@@ -1,25 +1,32 @@
 body {
-	background-image: url("../images/diamond.png");
+	background-image: url("../images/grey.png");
+	font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+	font-size: 80px;
 }
 
 .header {
+	background-image: url(../images/skulls.png);
+	font-family: 'Barrio', cursive;
 	width: auto;
 	text-align: center;
-	background-color: white;
 	border: 1px solid;
-	padding: 10px 5px;
+	padding: 10px;
 	margin-bottom: 10px;
 }
 
-.col-md-4 {
-	background-color: white;
-	border: 1px solid;
+.col-md-5 {
+	background-image: url(../images/skulls.png);
+	color: red;
+	border: 1px solid black;
 	padding: 20px;
 	margin: 10px;
 }
 
 .col-md-6 {
-	background-color: white;
+	background-image: url(../images/skulls.png);
 	border: 1px solid;
 	padding: 15px;
 	margin: 10px;
@@ -35,4 +42,3 @@ body {
 	border: 1px solid;
 	margin: 10px;
 }
-
