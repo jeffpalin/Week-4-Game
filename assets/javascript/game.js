@@ -14,17 +14,17 @@ var wins = 0;
 var losses = 0;
 var counter = 0;
 
-// Updates HTMLfor variables prior to playing and after winning or losing
+// Updates HTML for variables prior to playing and after winning or losing
 //(shows 0 on wins/losses/counter prior to selecting crystal)
 
-function resetHtml() {
-$("#guessNum").text(guessNum);
-$("#wins").text(wins);
-$("#losses").text(losses);
-$("#counter").text(counter);
+function refreshHtml() {
+	$("#guessNum").text(guessNum);
+	$("#wins").text(wins);
+	$("#losses").text(losses);
+	$("#counter").text(counter);
 }
 
-resetHtml()
+refreshHtml()
 
 	console.log(guessNum);
 
@@ -36,12 +36,12 @@ function crystalArray() {
 	crystals = [];	
 	for (var i = 0; i < 4; i++) {
 		crystals.push(randomNumber(1, 12));
-		}
 	}
+}
 
 crystalArray();
 
-	console.log('crystal values', crystals);
+	console.log('initial crystal values', crystals);
 
 // For each iteration, we will create an imageCrystal
 		var green = $("<img>");
@@ -110,6 +110,7 @@ function  resetCrystalValue() {
 		alert("You win!!");
 		guessNum = randomNumber(19, 100);
 		resetCrystalValue();
+		console.log('crystal values after win/loss', crystals);
 
 
 	}	else if (counter >= guessNum) {
@@ -118,13 +119,10 @@ function  resetCrystalValue() {
 			alert("You lose!!");
 			guessNum = randomNumber(19, 100);
 			resetCrystalValue();
+			console.log('crystal values after win/loss', crystals);
 	}
 
-resetHtml();
-
-console.log('crystal values after if else', crystals);
-
-
+refreshHtml();
 
 });
 
