@@ -2,20 +2,29 @@
 
 $(document).ready(function(){
 
+//random function 
+function randomNumber(min, max) {
+	return Math.floor((Math.random() * max) + min);
+}
+
 // variable for random guess number
 
-var guessNum = Math.floor((Math.random() *100) + 19);
+var guessNum = randomNumber(19, 100);
 var wins = 0;
 var losses = 0;
 var counter = 0;
 
-// Updates HTMl for variables prior to playing
+// Updates HTMLfor variables prior to playing and after winning or losing
 //(shows 0 on wins/losses/counter prior to selecting crystal)
 
+function resetHtml() {
 $("#guessNum").text(guessNum);
 $("#wins").text(wins);
 $("#losses").text(losses);
 $("#counter").text(counter);
+}
+
+resetHtml()
 
 	console.log(guessNum);
 
@@ -24,12 +33,15 @@ $("#counter").text(counter);
 var crystals = [];
 
 function crystalArray() {
-	for (i=0; i<4; i++) {
-	crystals.push(Math.floor((Math.random() * 12) + 1));
+	crystals = [];	
+	for (var i = 0; i < 4; i++) {
+		crystals.push(randomNumber(1, 12));
+		}
 	}
-}
 
 crystalArray();
+
+	console.log('crystal values', crystals);
 
 // For each iteration, we will create an imageCrystal
 		var green = $("<img>");
@@ -63,10 +75,6 @@ crystalArray();
 		$("#crystals").append(blue);
 		$("#crystals").append(purple);
 
-
-console.log(crystals)
-
-
 //listen for click on a crystal (number)
 
 $(".crystal-image").on("click", function() {
@@ -84,23 +92,39 @@ crystalValue = parseInt(crystalValue);
 
 counter += crystalValue;
 
+//Funcction to re-run crystalArray function and update data attribute "data-crystalValue"
+
+function  resetCrystalValue() {
+	crystalArray();
+		green.attr("data-crystalvalue", crystals[0]);
+		red.attr("data-crystalvalue", crystals[1]);
+		blue.attr("data-crystalvalue", crystals[2]);
+		purple.attr("data-crystalvalue", crystals[3]);
+}
 
 // All of the same game win-lose logic applies. So the rest remains unchanged.
 
 	if (counter === guessNum) {
-		alert("You win!");
 		counter = 0;
 		wins++;
+		alert("You win!!");
+		guessNum = randomNumber(19, 100);
+		resetCrystalValue();
+
 
 	}	else if (counter >= guessNum) {
-			alert("You lose!!");
 			counter = 0;
 			losses++;
+			alert("You lose!!");
+			guessNum = randomNumber(19, 100);
+			resetCrystalValue();
 	}
 
-$("#wins").text(wins);
-$("#losses").text(losses);
-$("#counter").text(counter);
+resetHtml();
+
+console.log('crystal values after if else', crystals);
+
+
 
 });
 
